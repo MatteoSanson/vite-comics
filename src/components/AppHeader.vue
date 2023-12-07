@@ -13,8 +13,10 @@ export default {
 
 <template>
     <header>
-        <AppLogo />
-        <AppNavHeader />
+        <div class="container">
+            <AppLogo />
+            <AppNavHeader />
+        </div>
     </header>
 </template>
 
@@ -24,5 +26,12 @@ export default {
 
 header {
     color: $header;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
 }
 </style>

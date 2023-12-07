@@ -9,4 +9,8 @@ export default {
 </template>
 
 
-<style scoped></style>
+<style scoped>
+main {
+    background-color: #1c1c1c;
+}
+</style>

@@ -9,4 +9,8 @@ export default {
 </template>
 
 
-<style scoped></style>
+<style scoped>
+footer {
+    background-color: #303030;
+}
+</style>

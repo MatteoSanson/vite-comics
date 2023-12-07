@@ -4,11 +4,6 @@ import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
 
 export default {
-  data() {
-    return {
-
-    }
-  },
   components: {
     AppHeader,
     AppMain,
@@ -23,4 +18,11 @@ export default {
   <AppFooter />
 </template>
 
-<style scoped></style>
+<style lang="scss">
+@use './styles/partials/variables.scss' as *;
+@use './styles/general.scss' as *;
+
+body {
+  color: $primary;
+}
+</style>

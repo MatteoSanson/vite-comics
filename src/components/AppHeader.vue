@@ -29,9 +29,10 @@ header {
 }
 
 .container {
-    margin: 0 auto;
+    margin: 20px auto;
     width: 80%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 </style>

@@ -1,13 +1,102 @@
 <script>
 export default {
     name: 'NavHeader',
+    data() {
+        return {
+            menu: [
+                {
+                    nome: 'Characters',
+                    link: '#',
+                    target: '_self',
+                },
+                {
+                    nome: 'Comics',
+                    link: '#',
+                    target: '_self',
+                },
+                {
+                    nome: 'Movis',
+                    link: '#',
+                    target: '_self',
+                },
+                {
+                    nome: 'Tv',
+                    link: '#',
+                    target: '_self',
+                },
+                {
+                    nome: 'Games',
+                    link: '#',
+                    target: '_self',
+                },
+                {
+                    nome: 'Collectibles',
+                    link: '#',
+                    target: '_self',
+                },
+                {
+                    nome: 'Videos',
+                    link: '#',
+                    target: '_self',
+                },
+                {
+                    nome: 'Fans',
+                    link: '#',
+                    target: '_self',
+                },
+                {
+                    nome: 'News',
+                    link: '#',
+                    target: '_self',
+                },
+                {
+                    nome: 'Shop',
+                    link: '#',
+                    target: '_self',
+                },
+            ]
+        }
+    },
 };
 </script>
 
 <template>
-    <ul>
-        <li>prova</li>
+    <ul class="navHeader">
+        <li v-for="li in menu">
+            <a :href="li.link" :target="li.target">
+                {{ li.nome.toUpperCase() }}
+            </a>
+        </li>
     </ul>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@use '../styles/partials/variables.scss' as *;
+
+.navHeader {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+}
+
+
+li {
+    padding: 5px 10px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+
+    a {
+        text-decoration: none;
+        color: $header;
+    }
+
+    &:hover {
+        color: #0282f9;
+        border-bottom: 3px solid #0282f9;
+
+        a {
+            color: #0282f9;
+        }
+    }
+}
+</style>

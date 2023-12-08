@@ -24,14 +24,4 @@ export default {
 <style lang="scss">
 @use './styles/partials/variables.scss' as *;
 @use './styles/general.scss' as *;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  color: $primary;
-}
 </style>

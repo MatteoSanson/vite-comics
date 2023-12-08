@@ -11,4 +11,8 @@ export default {
 </template>
 
 
-<style scoped></style>
+<style scoped>
+img {
+    display: block;
+}
+</style>

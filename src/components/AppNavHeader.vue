@@ -15,7 +15,7 @@ export default {
                     target: '_self',
                 },
                 {
-                    nome: 'Movis',
+                    nome: 'Movies',
                     link: '#',
                     target: '_self',
                 },

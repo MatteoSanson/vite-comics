@@ -81,9 +81,9 @@ export default {
 
 
 li {
+    position: relative;
+
     padding: 5px 10px;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
 
     a {
         text-decoration: none;
@@ -91,11 +91,20 @@ li {
     }
 
     &:hover {
-        color: #0282f9;
-        border-bottom: 3px solid #0282f9;
+        color: $onhover;
 
         a {
-            color: #0282f9;
+            color: $onhover;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -57px;
+            width: 100%;
+            height: 3px;
+            background-color: $onhover;
         }
     }
 }

@@ -45,16 +45,15 @@ export default {
         <div class="container">
             <ul>
                 <li v-for="li in dcList" class="point">
-                    <div class="logo">
-                        <a :href="li.link" :target="li.target">
+                    <a :href="li.link" :target="li.target" class="flecs">
+                        <div class="logo">
                             <img :src="li.img" :alt="li.name">
-                        </a>
-                    </div>
-                    <div class="near-logo">
-                        <a :href="li.link" :target="li.target">
+                        </div>
+                        <div class="near-logo">
                             {{ li.name.toUpperCase() }}
-                        </a>
-                    </div>
+                        </div>
+                    </a>
+
                 </li>
 
             </ul>
@@ -68,15 +67,6 @@ export default {
 
 .jumbo {
     background-color: $onhover;
-
-    a {
-        text-decoration: none;
-        color: $primary;
-
-        &:hover {
-            color: gainsboro;
-        }
-    }
 }
 
 .container {
@@ -94,21 +84,33 @@ export default {
     }
 }
 
-.point {
+.point a.flecs {
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: $primary;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        color: gainsboro;
+        transform: scale(1.2);
+    }
 }
 
 .logo {
     width: 40px;
     height: 40px;
 
-    a img {
+    img {
         width: 100%;
         height: 100%;
         object-fit: contain;
         display: block;
+        transition: transform 0.3s ease-in-out;
     }
 }
 </style>

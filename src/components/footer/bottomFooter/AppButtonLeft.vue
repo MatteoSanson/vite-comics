@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <a href="">
+    <a href="#">
         <div class="button">
             sign-up now!
         </div>
@@ -14,7 +14,7 @@ export default {
 
 
 <style scoped lang="scss">
-@use '../../styles/partials/variables.scss' as *;
+@use '../../../styles/partials/variables.scss' as *;
 
 a {
     text-decoration: none;

@@ -25,7 +25,7 @@ export default {
 
 
 <style scoped lang="scss">
-@use '../../styles/partials/variables.scss' as *;
+@use '../../../styles/partials/variables.scss' as *;
 
 .btm-footer {
     width: 80%;

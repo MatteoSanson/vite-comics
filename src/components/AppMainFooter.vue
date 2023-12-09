@@ -1,10 +1,12 @@
 <script>
 import AppMfLeft from './AppMfLeft.vue';
+import AppMfRight from './AppMfRight.vue';
 
 export default {
     name: 'MainFooter',
     components: {
         AppMfLeft,
+        AppMfRight,
     }
 };
 </script>
@@ -13,6 +15,7 @@ export default {
     <div class="main-footer">
         <div class="mf-content">
             <AppMfLeft />
+            <AppMfRight />
         </div>
     </div>
 </template>
@@ -29,5 +32,7 @@ export default {
 .mf-content {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 </style>

@@ -1,6 +1,6 @@
 <script>
-import AppButtonLeft from './FooterBottom/AppButtonLeft.vue';
-import AppBtmRight from './FooterBottom/AppBtmRight.vue';
+import AppButtonLeft from './AppButtonLeft.vue';
+import AppBtmRight from './AppBtmRight.vue';
 
 export default {
     name: 'BottomFooter',
@@ -25,7 +25,7 @@ export default {
 
 
 <style scoped lang="scss">
-@use '../styles/partials/variables.scss' as *;
+@use '../../styles/partials/variables.scss' as *;
 
 .btm-footer {
     width: 80%;

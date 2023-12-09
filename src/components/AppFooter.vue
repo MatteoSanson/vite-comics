@@ -1,6 +1,6 @@
 <script>
 import AppMainFooter from './AppMainFooter.vue';
-import AppBottomFooter from './AppBottomFooter.vue';
+import AppBottomFooter from './footerBottom/AppBottomFooter.vue';
 
 export default {
     name: 'Footer',

@@ -28,10 +28,11 @@ a {
         align-items: center;
         justify-content: center;
         text-transform: uppercase;
-    }
 
-    &:hover {
-        color: $onhover;
+        &:hover {
+            color: $onhover;
+            border: 1px solid $primary;
+        }
     }
 }
 </style>

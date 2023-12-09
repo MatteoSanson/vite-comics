@@ -185,7 +185,7 @@ export default {
     padding-top: 40px;
     width: 35%;
     display: flex;
-    gap: 10px;
+    gap: 30px;
 
     h3 {
         text-transform: uppercase;
@@ -196,7 +196,7 @@ export default {
 
         li {
             font-size: 12px;
-            line-height: 18px;
+            line-height: 20px;
             color: gray;
         }
 

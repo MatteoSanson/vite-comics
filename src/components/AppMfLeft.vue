@@ -147,14 +147,18 @@ export default {
             <h3>dc comics</h3>
             <ul>
                 <li v-for="li in dcComics">
-                    {{ li.name }}
+                    <a :href="li.link" :target="li.target">
+                        {{ li.name }}
+                    </a>
                 </li>
             </ul>
 
             <h3>shop</h3>
             <ul>
                 <li v-for="li in shop">
-                    {{ li.name }}
+                    <a :href="li.link" :target="li.target">
+                        {{ li.name }}
+                    </a>
                 </li>
             </ul>
         </div>
@@ -163,7 +167,9 @@ export default {
             <h3>dc</h3>
             <ul>
                 <li v-for="li in dc">
-                    {{ li.name }}
+                    <a :href="li.link" :target="li.target">
+                        {{ li.name }}
+                    </a>
                 </li>
             </ul>
         </div>
@@ -172,7 +178,9 @@ export default {
             <h3>sites</h3>
             <ul>
                 <li v-for="li in sites">
-                    {{ li.name }}
+                    <a :href="li.link" :target="li.target">
+                        {{ li.name }}
+                    </a>
                 </li>
             </ul>
         </div>
@@ -181,6 +189,8 @@ export default {
 
 
 <style scoped lang="scss">
+@use '../styles/partials/variables.scss' as *;
+
 .menu-footer {
     padding-top: 40px;
     width: 35%;
@@ -203,6 +213,21 @@ export default {
         li:first-child {
             padding-top: 10px;
         }
+
+        a {
+            text-decoration: none;
+            color: gray;
+
+            &:hover {
+                color: $onhover;
+
+                a {
+                    color: $onhover;
+                }
+            }
+        }
+
+
     }
 
 }

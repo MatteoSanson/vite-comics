@@ -6,25 +6,27 @@ export default {
 
 <template>
     <main>
-        <div class="container-main">
-            <p>
-                --&gt; Content goes here &lt;--
-            </p>
-        </div>
+
     </main>
 </template>
 
 
 <style scoped>
 main {
+    min-height: 500px;
     background-color: #1c1c1c;
-}
+    position: relative;
+    overflow: hidden;
 
-.container-main {
-    width: 80%;
-    margin: 0 auto;
-    height: 130px;
-    display: flex;
-    align-items: center;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 400px;
+        background: url('../../../public/img/jumbotron.jpg') no-repeat center top / 100%;
+        background-size: cover;
+    }
 }
 </style>

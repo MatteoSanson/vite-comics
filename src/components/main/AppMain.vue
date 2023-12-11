@@ -1,12 +1,17 @@
 <script>
+import AppContentMain from './AppContentMain.vue';
+
 export default {
     name: 'Main',
+    components: {
+        AppContentMain,
+    }
 };
 </script>
 
 <template>
     <main>
-
+        <AppContentMain />
     </main>
 </template>
 
@@ -17,6 +22,7 @@ main {
     background-color: #1c1c1c;
     position: relative;
     overflow: hidden;
+    color: white;
 
     &::before {
         content: "";
@@ -25,8 +31,9 @@ main {
         left: 0;
         right: 0;
         height: 400px;
-        background: url('../../../public/img/jumbotron.jpg') no-repeat center top / 100%;
+        background: url('/img/jumbotron.jpg') no-repeat center top / 100%;
         background-size: cover;
     }
+
 }
 </style>

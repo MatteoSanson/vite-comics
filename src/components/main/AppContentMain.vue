@@ -1,6 +1,11 @@
 <script>
+import AppTitolo from './AppTitolo.vue';
+
 export default {
     name: 'ContentMain',
+    components: {
+        AppTitolo,
+    },
     data() {
         return {
             items: [
@@ -89,6 +94,7 @@ export default {
                 <div class="img">
                     <img :src="item.thumb" :alt="item.series">
                 </div>
+                <AppTitolo :alt="item.series" />
             </li>
         </ul>
     </div>
@@ -106,22 +112,27 @@ export default {
         display: flex;
         flex-wrap: wrap;
         height: auto;
+        gap: .9375rem;
 
         li {
-            width: calc(100% / 6);
+            width: calc(100% / 6 - 15px);
+            margin-bottom: 20px;
 
             .img {
                 margin: 0 auto;
-                width: 200px;
-                height: 200px;
-                object-fit: contain;
+                width: 100%;
+                padding-top: 100%;
                 overflow: hidden;
-                margin-bottom: 20px;
+                position: relative;
 
                 img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                     display: block;
                     width: 100%;
-
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
         }

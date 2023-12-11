@@ -1,10 +1,10 @@
 <script>
-import AppTitolo from './AppTitolo.vue';
+import AppCard from './AppCard.vue';
 
 export default {
     name: 'ContentMain',
     components: {
-        AppTitolo,
+        AppCard,
     },
     data() {
         return {
@@ -90,12 +90,7 @@ export default {
 <template>
     <div class="content-container">
         <ul>
-            <li v-for="item in items">
-                <div class="img">
-                    <img :src="item.thumb" :alt="item.series">
-                </div>
-                <AppTitolo :alt="item.series" />
-            </li>
+            <AppCard v-for="item in items" :image="item.thumb" :title="item.series" />
         </ul>
     </div>
 </template>
@@ -113,29 +108,6 @@ export default {
         flex-wrap: wrap;
         height: auto;
         gap: .9375rem;
-
-        li {
-            width: calc(100% / 6 - 15px);
-            margin-bottom: 20px;
-
-            .img {
-                margin: 0 auto;
-                width: 100%;
-                padding-top: 100%;
-                overflow: hidden;
-                position: relative;
-
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
     }
 
 

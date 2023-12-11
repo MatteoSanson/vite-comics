@@ -19,7 +19,7 @@ export default {
 </template>
 
 
-<style scoped lang="scss">
+<style lang="scss">
 main {
     background-color: #1c1c1c;
     display: flex;

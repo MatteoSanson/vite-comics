@@ -98,25 +98,30 @@ export default {
 <style scoped lang="scss">
 .content-container {
     width: 80%;
-    flex-grow: 1;
+    flex-basis: 100%;
     margin: 0 auto;
 
     ul {
-        margin: 20px 0;
+        margin: 40px 0;
         display: flex;
         flex-wrap: wrap;
+        height: auto;
 
         li {
             width: calc(100% / 6);
 
             .img {
-                width: 130px;
-                height: 130px;
+                margin: 0 auto;
+                width: 200px;
+                height: 200px;
                 object-fit: contain;
+                overflow: hidden;
+                margin-bottom: 20px;
 
                 img {
+                    display: block;
                     width: 100%;
-                    overflow: hidden;
+
                 }
             }
         }
